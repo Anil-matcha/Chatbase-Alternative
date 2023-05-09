@@ -30,3 +30,5 @@ Follow [Anil Chandra Naidu Matcha](https://twitter.com/matchaman11) on twitter f
 
 https://heybot.thesamur.ai/
 
+### Also check
+[Chat with PDF code](https://github.com/Anil-matcha/ChatPDF)
