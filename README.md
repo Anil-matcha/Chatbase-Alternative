@@ -32,3 +32,5 @@ https://heybot.thesamur.ai/
 
 ### Also check
 [Chat with PDF code](https://github.com/Anil-matcha/ChatPDF)
+
+[Chat with CSV code](https://github.com/Anil-matcha/Chat-With-Excel)
