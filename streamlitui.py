@@ -31,13 +31,14 @@ def is_openai_api_key_set() -> bool:
 def main():
     if len(st.session_state) == 0:
         st.session_state["messages"] = []
+        st.session_state["url"] = ""
         st.session_state["OPENAI_API_KEY"] = os.environ.get("OPENAI_API_KEY", "")
         if is_openai_api_key_set():
             st.session_state["webquery"] = WebQuery(st.session_state["OPENAI_API_KEY"])
         else:
             st.session_state["webquery"] = None
 
-    st.header("ChatPDF")
+    st.header("Website to Chatbot")
 
     if st.text_input("OpenAI API Key", value=st.session_state["OPENAI_API_KEY"], key="input_OPENAI_API_KEY", type="password"):
         if (
@@ -50,10 +51,10 @@ def main():
             st.session_state["webquery"] = WebQuery(st.session_state["OPENAI_API_KEY"])
 
     st.subheader("Add a url")
-    if st.text_input("Input url", value=st.session_state["url"], key="input_url", type="text"):
+    if st.text_input("Input url", value=st.session_state["url"], key="input_url", type="default"):
         if (
             len(st.session_state["input_url"]) > 0
-            and st.session_state["input_url"] != st.session_state["text"]
+            and st.session_state["input_url"] != st.session_state["url"]
         ):
             st.session_state["url"] = st.session_state["input_url"]
 
