@@ -4,7 +4,7 @@ import streamlit as st
 from streamlit_chat import message
 from webquery import WebQuery
 
-st.set_page_config(page_title="ChatPDF")
+st.set_page_config(page_title="Website to Chatbot")
 
 
 def display_messages():
@@ -22,7 +22,12 @@ def process_input():
 
         st.session_state["messages"].append((user_text, True))
         st.session_state["messages"].append((query_text, False))
-
+        
+def ingest_input():
+    if st.session_state["input_url"] and len(st.session_state["input_url"].strip()) > 0:
+        url = st.session_state["input_url"].strip()
+        with st.session_state["thinking_spinner"], st.spinner(f"Thinking"):
+            ingest_text = st.session_state["webquery"].ingest(url)        
 
 def is_openai_api_key_set() -> bool:
     return len(st.session_state["OPENAI_API_KEY"]) > 0
@@ -48,15 +53,11 @@ def main():
             st.session_state["OPENAI_API_KEY"] = st.session_state["input_OPENAI_API_KEY"]
             st.session_state["messages"] = []
             st.session_state["user_input"] = ""
+            st.session_state["input_url"] = ""
             st.session_state["webquery"] = WebQuery(st.session_state["OPENAI_API_KEY"])
 
     st.subheader("Add a url")
-    if st.text_input("Input url", value=st.session_state["url"], key="input_url", type="default"):
-        if (
-            len(st.session_state["input_url"]) > 0
-            and st.session_state["input_url"] != st.session_state["url"]
-        ):
-            st.session_state["url"] = st.session_state["input_url"]
+    st.text_input("Input url", value=st.session_state["url"], key="input_url", disabled=not is_openai_api_key_set(), on_change=ingest_input)
 
     st.session_state["ingestion_spinner"] = st.empty()
 
