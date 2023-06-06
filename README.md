@@ -28,6 +28,8 @@ Subscribe to https://www.youtube.com/@AnilChandraNaiduMatcha for more such video
 
 5. Change url and query in code if you want to try with any other content
 
+To run streamlit app, follow the steps run "streamlit run streamlitui.py"
+
 ### Demo link
 
 https://heybot.thesamur.ai/
