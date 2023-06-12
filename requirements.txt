@@ -45,3 +45,7 @@ tzdata==2023.3
 tzlocal==4.3
 urllib3==1.26.15
 yarl==1.9.2
+streamlit==1.23.1
+streamlit_chat==0.0.2.2
+chromadb==0.3.26
+tiktoken==0.4.0
