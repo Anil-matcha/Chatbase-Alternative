@@ -4,7 +4,7 @@ ChatGPT for every website
 
 Instantly answer your visitors' questions with a personalized chatbot trained on your website content.
 
-Create app like [SiteGPT](https://sitegpt.ai) or [Chatbase](https://chatbase.co) in less than 40 lines of code
+Create app like [SiteGPT](https://www.thesamur.ai/sitegpt-alternative) or [Chatbase](https://www.thesamur.ai/chatbase-alternative) or [Dante AI](https://www.thesamur.ai/danteai-alternative) in less than 40 lines of code
 
 ### Getting Started
 
