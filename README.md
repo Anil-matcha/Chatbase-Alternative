@@ -4,7 +4,7 @@ ChatGPT for every website
 
 Instantly answer your visitors' questions with a personalized chatbot trained on your website content.
 
-Create app like [SiteGPT](https://www.thesamur.ai/sitegpt-alternative) or [Chatbase](https://www.thesamur.ai/chatbase-alternative) or [Dante AI](https://www.thesamur.ai/danteai-alternative) in less than 40 lines of code
+Create app like [SiteGPT](https://www.thesamur.ai/sitegpt-alternative) , [Chatbase](https://www.thesamur.ai/chatbase-alternative) , [Dante AI](https://www.thesamur.ai/danteai-alternative) , [Botsonic](https://www.thesamur.ai/botsonic-alternatives) , [CustomGPT](https://www.thesamur.ai/customgpt-alternative) , [Botpress](https://www.thesamur.ai/botpress-alternative) , [Chatbot AI](https://www.thesamur.ai/botpress-alternative) in less than 40 lines of code
 
 ### Getting Started
 
